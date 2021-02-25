@@ -19,27 +19,27 @@ public class Playlist {
 	private String playlistName;
 	private String fileName;
 	
+	// default constructor
 	public Playlist() {
-		// default constructor
 		size = 0;
 		songs = new Song[DEFAULT_SIZE];
 		playlistName = "a playlist";
 		fileName = null;
 	}
+	// constructor with given playlist name and input file
 	public Playlist(String pn, String fn) {
-		// constructor with given course name and input file
 		this();
 		playlistName = pn;
 		fileName = fn;
 		readFile();
-	}	
+	}
+	// method that adds the input song to the playlist array
 	public void addSong(Song s) {
-		// method that adds the input Student to the people array
 		if (size >= songs.length)
 			doubleArray();
 		songs[size] = s;
 		size++;
-	}	
+	}
 	public void addPersonFromKeyboard () {
 		// method that prompts the user to enter either a student or instructor
 		// then the user inputs the appropriate information for that person type
@@ -54,24 +54,30 @@ public class Playlist {
 		// complete for homework #2  
 		
 	}
+	// private method used to double the size of the array when needed
 	private void doubleArray () {
-		// private method used to double the size of the array when needed
 		Song[] newSongs = new Song[songs.length*2];
 		for (int i = 0; i < size; i++) {
 			newSongs[i] = songs[i];
 		}		
 		songs = newSongs;
 	}
-	
+	// returns a string representation of this playlist
 	public String toString() {
-		// returns a string representation of this roster
 		String toReturn = playlistName+"\n";
 		for (int i = 0; i < size; i++)
-			toReturn += "Song:  "+ songs[i] +"\n";
+			toReturn += "Song: "+ songs[i] +"\n";
 		return toReturn;
 	}
-
 	
+	public void setplaylistName(String pn) {
+		playlistName = pn;
+	}
+	public String getplaylistName() {
+		return playlistName;
+	}
+
+	// file reader
 	private void readFile () {
 		BufferedReader lineReader = null;
 		try {
@@ -122,7 +128,7 @@ public class Playlist {
 		}
 	} // end of readFile method	
 	
-	/*
+	
 	public void writeFile () {
 		// overloaded method: this calls doWrite with file used to read data
 		// use this for saving data between runs
@@ -137,7 +143,7 @@ public class Playlist {
 	
 	
 	private void doWrite(String fn) {
-		// this method writes all of the data in the persons array to a file
+		// this method writes all of the data in the playlist array to a file
 		try
 		{
 
@@ -145,22 +151,11 @@ public class Playlist {
 			BufferedWriter myOutfile = new BufferedWriter(fw);			
 			
 			for (int i = 0; i < size; i++) {
-				Person person = people[i];
-				if (person instanceof Student) {
-					myOutfile.write ("student\n");
-					myOutfile.write (person.getName()+"\n");
-					myOutfile.write (person.getId()+"\n");
-					myOutfile.write (((Student) person).getGpa()+"\n");
-				}
-				else if (person instanceof Instructor) {
-					myOutfile.write ("instructor\n");
-					myOutfile.write (person.getName()+"\n");
-					myOutfile.write (person.getId()+"\n");
-					myOutfile.write (((Instructor) person).getEmail()+"\n");
-				}	
-				else {
-					System.err.println("error in array, instance type not found");
-				}
+				Song song = songs[i];
+				myOutfile.write ("song: ");
+				//myOutfile.write (person.getName()+"\n");
+				//myOutfile.write (person.getId()+"\n");
+				//myOutfile.write (((Student) person).getGpa()+"\n");
 			}
 			myOutfile.flush();
 			myOutfile.close();
@@ -169,6 +164,6 @@ public class Playlist {
 			e.printStackTrace();
 			System.err.println("Didn't save to " + fn);
 		}
-	}	*/
+	}/**/
 }
 

@@ -78,7 +78,7 @@ public class Song {
 		artist_longitude = al;
 	}
 	
-	// string representation of this Student
+	// string representation of this song
 	public String toString () {
 		return track_id + " " + artist_name + " " + genre + " " + track_title + " " + album_title + " " + year_created + " " + artist_longitude;
 	}
