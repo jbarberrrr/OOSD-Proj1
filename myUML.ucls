@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="ProjPackage.Playlist" project="ProjectPt2" 
     file="/ProjectPt2/ProjPackage/Playlist.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="279" width="180" x="148" y="20"/>    
+    <position height="-1" width="-1" x="271" y="164"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="ProjPackage.Song" project="ProjectPt2" file="/ProjectPt2/ProjPackage/Song.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="495" width="222" x="148" y="339"/>    
+    <position height="-1" width="-1" x="520" y="227"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="ProjPackage.Tester" project="ProjectPt2" 
     file="/ProjectPt2/ProjPackage/Tester.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="418" y="71"/>    
+    <position height="-1" width="-1" x="85" y="116"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,8 +30,12 @@
   </class>  
   <association id="4">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="5" name="songs"/>      
-      <multiplicity id="6" minimum="0" maximum="2147483647"/>    
+      <attribute id="5" name="songs">        
+        <position height="0" width="0" x="261" y="-359"/>      
+      </attribute>      
+      <multiplicity id="6" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="261" y="-359"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  

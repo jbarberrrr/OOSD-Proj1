@@ -9,9 +9,7 @@ public class Song {
 	private String album_title;
 	private int year_created;
 	private int artist_longitude;
-	
-	//track_id,artist_name,genre,track_title, album_title,year_created,artist_longitude
-	
+
 	// default constructor
 	public Song() {
 		track_id = -1;
@@ -23,7 +21,7 @@ public class Song {
 		artist_longitude = -1;
 	}
 	
-	// constructor to create new song
+	// constructor to create new song 
 	public Song(int ti, String an, String g, String tt, String at, int yc, int al) {
 		track_id = ti;
 		artist_name = an;
